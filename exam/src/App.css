@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap");
+
+body {
+  margin: 0;
+  background-color: #202020;
+  font-family: "Maven Pro", sans-serif;
+  scroll-behavior: smooth;
+}
+
+#main-wrap {
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#main-wrap #borders:before {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-color: #202020;
+  z-index: 99;
+  transform: translateY(20px);
+}
+
+#main-wrap #borders:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background-color: #202020;
+  z-index: 99;
+  transform: translateY(-20px);
+}
+
+#main-wrap:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0px;
+  border-radius: 0px;
+  background-color: #f4f4f4;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#app-root.active #main-wrap:after {
+  margin: 20px;
+  border-radius: 20px;
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#app-root.active #main-wrap #borders:after,
+#app-root.active #main-wrap #borders:before {
+  transform: translateX(0);
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+[class*="page-header"],
+[class*="page-loader"] {
+  position: relative;
+  z-index: 2;
+  padding: 40px 26px;
+}
