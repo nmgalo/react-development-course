@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: #202020;
@@ -67,4 +71,8 @@ body {
   position: relative;
   z-index: 2;
   padding: 40px 26px;
+}
+
+.loading .active_content {
+  opacity: 0;
 }
